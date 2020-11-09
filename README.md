@@ -7,6 +7,10 @@ This is the official public repository for a battery-free prototping platform wi
 
 ## Project Overview
 
+<a href="https://www.northwestern.edu"><img src="https://github.com/TUDSSL/BFree/blob/master/doc-images/bfree-overview.jpg" width="300px">
+  
+(A) BFree hardware shield; (B) example Python code executed on Adafruit Metro M0 Board; (C) BFree shield with Metro M0 board executing a battery-free temperature measurement station; (D) BFree system in the wild.
+
 ## Getting Started
 
 ### Building the Hardware
@@ -54,7 +58,7 @@ This research project was supported by [Netherlands Organisation for Scientific 
 
 ENGAGE was designed at [Northwestern University](https://www.northwestern.edu) in the US and [Delft University of Technology](https://www.tudelft.nl) in the Netherlands, whose both support is also greatly acknowledged. 
 
-<!--<a href="https://www.northwestern.edu"><img src="https://github.com/TUDSSL/BFree/blob/master/doc-images/northwestern_logo.jpg" width="300px"></a><a href="https://www.tudelft.nl"><img src="https://github.com/TUDSSL/BFree/blob/master/doc-images/tudelft_logo.png" width="300px"></a>-->
+<a href="https://www.northwestern.edu"><img src="https://github.com/TUDSSL/BFree/blob/master/doc-images/northwestern_logo.jpg" width="300px"></a><a href="https://www.tudelft.nl"><img src="https://github.com/TUDSSL/BFree/blob/master/doc-images/tudelft_logo.png" width="300px"></a>
 
 ## Copyright
 
