@@ -5,6 +5,15 @@ This is the official public repository for a battery-free prototping platform wi
 
 ## Table of Contents
 
+- [Project Overview](#Project-Overview)
+    - ...
+- [List of Known Issues](#List-of-Known-Issues)
+- ...
+- [How to Cite This Work](#How-to-Cite-This-Work)
+- ...
+- [Acknowledgments](#Acknowledgments)
+- [Copyright](#Copyright)
+
 ## Project Overview
 
 <img src="https://github.com/TUDSSL/BFree/blob/main/doc-images/bfree-overview.jpg" width="800px">
