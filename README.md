@@ -23,11 +23,19 @@ This is the official public repository for a battery-free prototping platform wi
 
 ## How to Cite This Work
 
+The results of this project have been published in a peer-reviewed academic publication (from which all technical figures in this file originate). Details of the publication are as follows.
+
+* **Authors and the project team:** [Vito Kortbeek](https://www.vitokortbeek.com/), [Abu Bakar](http://www.abubakar.info/), [Stefany Cruz](https://www.linkedin.com/in/stefany-cruz-1386b4147/), [Kasim Sinan Yildirim](https://sinanyil81.github.io/), [Przemysław Pawełczak](http://www.pawelczak.net/), [Josiah Hester](https://josiahhester.com/)
+* **Publication title:** _BFree: Enabling Battery-Free Sensor Prototyping with Python_
+* **Pulication venue:** [Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, Volume X, Issue Y, Z X]() and [Proceedings of ACM UbiComp 2021](https://ubicomp.org/ubicomp2021/)
+* **Link to publication:** [to be added] (Open Access)
+* **Link to ACM UbiComp 2021 conference presentation video:** [to be added]
+
 To cite this publication please use the following BiBTeX entry.
 
 ```
 @article{kortbeek:imwut:2020:bfree,
-  title = {BFree: Enabling Battery-free Sensor Prototyping with Python},
+  title = {BFree: Enabling Battery-Free Sensor Prototyping with Python},
   author = {Vito {Kortbeek} and Abu {Bakar} and Stefany {Cruz} and Kas{\i}m Sinan {Y{\i}ld{\i}r{\i}m} and Przemys{\l}aw {Pawe{\l}czak} and Josiah {Hester}},
   journal = {Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.},
   volume = {},
