@@ -17,6 +17,8 @@ This is the official public repository for a battery-free prototping platform wi
 
 ## List of Known Issues
 
+List of all known issues is listed in the [Issues](https://github.com/TUDSSL/BFree/issues) list of this project. If you found a bug or you would like to enhance ENGAGE: [please contribute](#How-to-Contribute-to-this-Project) - we look forward to your pull requests!
+
 ## How to Contribute to this Project
 
 ## Frequently Asked Questions
