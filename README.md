@@ -7,9 +7,9 @@ This is the official public repository for a battery-free prototping platform wi
 
 ## Project Overview
 
-<a href="https://www.northwestern.edu"><img src="https://github.com/TUDSSL/BFree/blob/main/doc-images/bfree-overview.jpg" width="300px">
+<img src="https://github.com/TUDSSL/BFree/blob/main/doc-images/bfree-overview.jpg" width="800px">
   
-(A) BFree hardware shield; (B) example Python code executed on Adafruit Metro M0 Board; (C) BFree shield with Metro M0 board executing a battery-free temperature measurement station; (D) BFree system in the wild.
+The above figure presents: (A) BFree hardware shield; (B) example Python code executed on [Adafruit Metro M0 Express board](https://www.adafruit.com/product/3505) with BFree shield; (C) BFree shield with Adafruit Metro M0 Express board running a battery-free temperature measurement station; (D) BFree system in the wild.
 
 ## Getting Started
 
