@@ -1,3 +1,4 @@
 [submodule "software/BFree-core"]
 	path = software/BFree-core
 	url = git@github.com:TUDSSL/BFree-core.git
+	branch = main
