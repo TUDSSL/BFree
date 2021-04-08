@@ -1,0 +1,6 @@
+#!/bin/bash
+
+[ -d foo ] || mkdir build
+pushd build
+cmake -DCMAKE_TOOLCHAIN_FILE=msp430-toolchain.cmake ../
+popd
