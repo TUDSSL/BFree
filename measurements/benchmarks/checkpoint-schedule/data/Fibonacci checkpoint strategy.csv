@@ -1,0 +1,4 @@
+App,run,Light intensity (lux),Mode,hybrid period,period,runtime,checkpoints,restores
+Fibonacci,1,3000,periodic,-,200,287857,374,57
+Fibonacci,1,3000,trigger,-,200,228249,85,42
+Fibonacci,1,3000,hybrid,100,300,321898,426,64

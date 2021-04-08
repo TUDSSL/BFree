@@ -1,0 +1,7 @@
+App,Run,Checkpoint period (mode periodic),input string,iterations,On-time,Off-time,On count,Off count,runtime,checkpoints,restores,Duty Cycle,Active runtime
+Strlen,0,200,"""These are reserved words in C language. \0""",10000,6000,0,1,0,70662,354,0,100,70662
+Strlen,0,200,"""These are reserved words in C language. \0""",10000,5000,1000,15,14,87435,354,14,83.33333333,73435
+Strlen,0,200,"""These are reserved words in C language. \0""",10000,4000,2000,19,18,110236,354,18,66.66666667,74236
+Strlen,0,200,"""These are reserved words in C language. \0""",10000,3000,3000,24,23,141957,354,23,50,72957
+Strlen,0,200,"""These are reserved words in C language. \0""",10000,2000,4000,42,41,250808,354,41,33.33333333,86808
+Strlen,0,200,"""These are reserved words in C language. \0""",10000,1000,5000,115,114,684757,355,113,16.66666667,114757

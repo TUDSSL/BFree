@@ -1,0 +1,6 @@
+App,Run,Checkpoint period (mode periodic),Samples per broadcast,Broadcast per run,On-time,Off-time,On count,Off count,runtime,checkpoints,restores,total samples,total broadcast,Duty Cycle,Active runtime
+Lora,0,200,100,50,6000,0,1,0,251551,1256,0,5000,50,100,251551
+Lora,0,200,100,50,5000,1000,53,52,315824,1266,52,5000,50,83.33333333,263824
+Lora,0,200,100,50,4000,2000,67,66,399968,1335,66,5000,50,66.66666667,267968
+Lora,0,200,100,50,3000,3000,92,91,551788,1338,91,5000,50,50,278788
+Lora,0,200,100,50,2000,4000,152,151,908975,1315,151,5000,50,33.33333333,304975

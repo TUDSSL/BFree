@@ -1,0 +1,6 @@
+App,Run,Checkpoint period (mode periodic),Time (ms) per refresh,Refreshes per run,On-time,Off-time,On count,Off count,runtime,checkpoints,restores,total samples,total refresh,Duty Cycle,Active runtime
+E-Paper,0,200,10000,25,6000,0,1,0,251982,1131,0,4450,25,100,251982
+E-Paper,0,200,10000,25,5000,1000,43,42,253351,865,42,3312,25,83.33333333,211351
+E-Paper,0,200,10000,25,4000,2000,43,42,253345,732,42,2523,25,66.66666667,169345
+E-Paper,0,200,10000,25,3000,3000,43,42,253380,467,41,1648,25,50,127380
+E-Paper,0,200,10000,25,2000,4000,43,42,253380,244,41,769,25,33.33333333,85380
