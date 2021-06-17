@@ -1,38 +1,38 @@
-from netdemo.layer import fc_layer
+from .layer import FCLayer as fc_layer
 
-# A neural network
-class net(object):
+
+class Net(object):
+    """Net class that represents a neural net"""
     __slots__ = 'layers'
-    # Initialize the network, with empty layer list
-    def __init__(self, file = None):
+
+    def __init__(self, file=None):
+        """Initialize the neural net. Layers, weights and biases are read from the given file.
+        If no file is given, it is kept empty and layers can be added manually."""
         self.layers = []
         # If a file is specified import from it
-        if (file is not None):
+        if file is not None:
             with open(file, 'rt') as fh:
                 # First read the amount of layers
                 for i in range(eval(fh.readline())):
                     # Create this layer
-                    newLayer = eval(fh.readline())
+                    new_layer = eval(fh.readline())
                     # Import layer from file
-                    newLayer.readFile(fh)
+                    new_layer.read_file(fh)
                     # Add this layer to the net
-                    self.addLayer(newLayer)
+                    self.layers += [new_layer]
 
-    # Add a layer to this neural network (does not check sizes)
-    def addLayer(self, layer):
-        self.layers += [layer]
-
-    # Run inference on this neural net
-    def infer(self, input):
+    def infer(self, input_data):
+        """Run inference with the input data set as the input tensor of the first layer,
+        returns the output tensor of the last layer"""
         # Set the initial input tensor
-        nextInput = input
+        next_input = input_data
         # Activate each layer
         for layer in self.layers:
             # Set input of the layer to initial or output of last layer
-            layer.t_in = nextInput
+            layer.t_in = next_input
             # Activate it
             layer.activate()
             # Set the next input
-            nextInput = layer.t_out
+            next_input = layer.t_out
         # Return the last output
-        return [a for a in nextInput]
+        return [a for a in next_input]
