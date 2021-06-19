@@ -1,5 +1,5 @@
 3
-fc_layer(1, 64, activator = lambda x:max(0, x))
+Layer(1, 64, activator = lambda x:max(0, x))
 -0.0630264
 0.19969612
 -0.06586428
@@ -128,7 +128,7 @@ fc_layer(1, 64, activator = lambda x:max(0, x))
 0.011523012
 -0.005052996
 0.06540389
-fc_layer(64, 64, activator = lambda x:max(0, x))
+Layer(64, 64, activator = lambda x:max(0, x))
 0.30313736
 -0.19000079
 -0.30942085
@@ -4289,7 +4289,7 @@ fc_layer(64, 64, activator = lambda x:max(0, x))
 -0.04404215
 -0.015961392
 -0.005974502
-fc_layer(64, 1)
+Layer(64, 1)
 -0.02312964
 -0.32743526
 -0.216678

@@ -1,13 +1,22 @@
-from .layer import FCLayer as fc_layer
+from layer import Layer
 
 
 class Net(object):
-    """Net class that represents a neural net"""
-    __slots__ = 'layers'
+    """
+    Net class that represents a neural net, with functions for importing and running inference.
+
+    Attributes:
+        layers: A list of the layers in this neural net.
+    """
 
     def __init__(self, file=None):
-        """Initialize the neural net. Layers, weights and biases are read from the given file.
-        If no file is given, it is kept empty and layers can be added manually."""
+        """
+        Initializes the neural net. Layers, weights and biases are read from the given file.
+        If no file is given, it is kept empty and layers can be added manually.
+
+        Args:
+            file: Optional; An input file containing a neural network.
+        """
         self.layers = []
         # If a file is specified import from it
         if file is not None:
@@ -22,8 +31,15 @@ class Net(object):
                     self.layers += [new_layer]
 
     def infer(self, input_data):
-        """Run inference with the input data set as the input tensor of the first layer,
-        returns the output tensor of the last layer"""
+        """
+        Runs inference with the input data set as the input tensor of the first layer,
+        returns the output tensor of the last layer.
+
+        Args:
+            input_data: The input tensor of the first layer.
+        Returns:
+            The output tensor of the last layer.
+        """
         # Set the initial input tensor
         next_input = input_data
         # Activate each layer
