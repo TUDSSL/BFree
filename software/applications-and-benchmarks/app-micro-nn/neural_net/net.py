@@ -20,7 +20,7 @@ class Net(object):
         self.layers = []
         # If a file is specified import from it
         if file is not None:
-            with open(file, 'rt') as fh:
+            with open(file, "rt") as fh:
                 # First read the amount of layers
                 for i in range(eval(fh.readline())):
                     # Create this layer

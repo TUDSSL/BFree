@@ -11,6 +11,7 @@ class Layer(object):
         bias: The bias tensor.
         activator: The activator function which is ran after activation.
     """
+
     # Optional way for Python to optimize variable lookups.
     __slots__ = "in_size", "out_size", "t_in", "t_out", "weights", "bias", "activator"
 

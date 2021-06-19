@@ -11,16 +11,26 @@ def run_demo(on_change: lambda n: None):
         on_change: Optional; A lambda expression or function that is ran with every new output value.
     """
     print("Simple Neural Network on CircuitPython: Running 2*16 layer model")
-    run_file(file='neural_net/models/sine-16-16.net', on_change=on_change, run_once=True)
+    run_file(
+        file="neural_net/models/sine-16-16.net", on_change=on_change, run_once=True
+    )
     print("Simple Neural Network on CircuitPython: Running 3*16 layer model")
-    run_file(file='neural_net/models/sine-16-16-16.net', on_change=on_change, run_once=True)
+    run_file(
+        file="neural_net/models/sine-16-16-16.net", on_change=on_change, run_once=True
+    )
     print("Simple Neural Network on CircuitPython: Running 2*32 layer model")
-    run_file(file='neural_net/models/sine-32-32.net', on_change=on_change, run_once=True)
+    run_file(
+        file="neural_net/models/sine-32-32.net", on_change=on_change, run_once=True
+    )
     print("Simple Neural Network on CircuitPython: Running 32+64 layer model")
-    run_file(file='neural_net/models/sine-64-32.net', on_change=on_change, run_once=True)
+    run_file(
+        file="neural_net/models/sine-64-32.net", on_change=on_change, run_once=True
+    )
 
 
-def run_file(file, start=0, end=math.pi * 2, steps=100, on_change=lambda n: None, run_once=False):
+def run_file(
+    file, start=0, end=math.pi * 2, steps=100, on_change=lambda n: None, run_once=False
+):
     """
     Runs the given net with inputs from the given start value to the given end value with the given step size
     and print the (input, output) tuples for the Mu plotter.
