@@ -17,7 +17,7 @@ class Layer(object):
 
     def __init__(self, in_size, out_size, activator=lambda x: x):
         """
-        Initialize the layer with the given in tensor size and out tensor size.
+        Initializes the layer with the given in tensor size and out tensor size.
         If activator is empty, this layer will be linear.
 
         Args:
@@ -43,7 +43,7 @@ class Layer(object):
 
     def activate(self):
         """
-        Activate this layer, runs activator and sets output tensor.
+        Activates this layer, runs activator and sets output tensor.
         """
 
         # Run for each neuron (output):
