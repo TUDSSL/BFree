@@ -1,4 +1,4 @@
-from layer import Layer
+from neural_net.layer import Layer
 
 
 class Net(object):

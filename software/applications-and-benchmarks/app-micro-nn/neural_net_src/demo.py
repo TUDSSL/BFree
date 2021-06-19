@@ -1,4 +1,5 @@
 import math
+import gc
 
 from neural_net.net import Net
 
@@ -10,21 +11,22 @@ def run_demo(on_change: lambda n: None):
     Args:
         on_change: Optional; A lambda expression or function that is ran with every new output value.
     """
+
     print("Simple Neural Network on CircuitPython: Running 2*16 layer model")
     run_file(
-        file="neural_net/models/sine-16-16.net", on_change=on_change, run_once=True
+        file="lib/neural_net/models/sine-16-16.net", on_change=on_change, run_once=True
     )
     print("Simple Neural Network on CircuitPython: Running 3*16 layer model")
     run_file(
-        file="neural_net/models/sine-16-16-16.net", on_change=on_change, run_once=True
+        file="lib/neural_net/models/sine-16-16-16.net", on_change=on_change, run_once=True
     )
     print("Simple Neural Network on CircuitPython: Running 2*32 layer model")
     run_file(
-        file="neural_net/models/sine-32-32.net", on_change=on_change, run_once=True
+        file="lib/neural_net/models/sine-32-32.net", on_change=on_change, run_once=True
     )
     print("Simple Neural Network on CircuitPython: Running 32+64 layer model")
     run_file(
-        file="neural_net/models/sine-64-32.net", on_change=on_change, run_once=True
+        file="lib/neural_net/models/sine-64-32.net", on_change=on_change, run_once=True
     )
 
 
@@ -68,3 +70,5 @@ def run_file(
                 break
             counter = start
     del demo_net
+    # Forcibly collect garbate to free up memory
+    gc.collect()

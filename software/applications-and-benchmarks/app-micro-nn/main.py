@@ -1,5 +1,6 @@
 import board
 import neopixel
+
 from neural_net.demo import run_demo
 
 # Create a single NeoPixel to write the x value of the sine to
