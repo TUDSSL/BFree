@@ -1,10 +1,10 @@
 import math
 import gc
 
-from neural_net.net import Net
+from .net import Net
 
 
-def run_demo(on_change: lambda n: None):
+def run_demo(on_change=lambda n: None):
     """
     Runs the provided models, prints 4 sines as fast as possible, with differently sized models.
 
