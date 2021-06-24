@@ -39,7 +39,7 @@ Furthermore, the built-in plotter will plot the input and output values of the n
 
 Currently the demo is unable to run without manually ordering the garbage collector to collect after a network has been deleted. I am unsure why the garbage collector is not doing its job.
 
-Due to the added size of documentation, it is now necessary to crosscompile the library using [mpy-cross](https://learn.adafruit.com/creating-and-sharing-a-circuitpython-library?view=all#mpy-2982472-11), however I have not yet been able to get this to work, so the 32+64 layer model is not working now.
+Due to the added size of documentation, it is now necessary to crosscompile the library using [mpy-cross](https://learn.adafruit.com/creating-and-sharing-a-circuitpython-library?view=all#mpy-2982472-11), however I have not yet been able to get this to work, so the 32+64 layer model is not working now. Also, the source files need to be copied from the `neural_net_src` folder to the `neural_net` folder before copying the library to the device.
 
 ## Inspirations and contributions
 
