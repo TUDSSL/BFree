@@ -14,7 +14,7 @@ def set_brightness(brightness):
     Args:
         brightness: The brightness of the led.
     """
-    dot[0] = [(brightness + 1) * a for a in [63, 0, 0]]
+    dot[0] = [(brightness * 0.95 + 1) * a for a in [63, 0, 0]]
 
 
 # Run the provided demo code
