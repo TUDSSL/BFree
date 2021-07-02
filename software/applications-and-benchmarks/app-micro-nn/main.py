@@ -14,7 +14,7 @@ def set_brightness(brightness):
     Sets the brightness of the initialized NeoPixel.
 
     Args:
-        brightness: the brightness of the LED
+        brightness: the brightness of the LED.
     """
 
     dot[0] = [(brightness * 0.95 + 1) * a for a in [63, 0, 0]]

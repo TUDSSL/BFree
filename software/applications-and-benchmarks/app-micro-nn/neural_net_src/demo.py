@@ -11,7 +11,7 @@ def run_demo(on_change=lambda n: None):
     Method to run the four provided sine models in lib/neural_net/models/.
 
     Args:
-        on_change: optional; a lambda expression or function that is ran with every new output value
+        on_change: optional; a lambda expression or function that is ran with every new output value.
     """
 
     print("Simple Neural Network for CircuitPython: Running 2*16 neurons neural network")
@@ -52,7 +52,7 @@ def run_file(
         on_change: optional; a lambda expression or function that is ran with every new output value,
                    on_change = lambda n: None if not provided.
         run_once: optional; if run_once == True, the demo net will be ran only once from 0 to 2*pi and will then stop.
-                  If run_once == False or not set, the input will reset to 0 and keep running
+                  If run_once == False or not set, the input will reset to 0 and keep running.
     """
 
     # Import neural network

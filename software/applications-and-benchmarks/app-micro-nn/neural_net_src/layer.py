@@ -2,7 +2,7 @@
 
 class Layer(object):
     """
-    This class represents a dense layer in a neural network
+    This class represents a dense layer in a neural network.
 
     This layer utilises tensors (https://en.wikipedia.org/wiki/Tensor) - the construct of choice in neural networks.
 
@@ -13,10 +13,10 @@ class Layer(object):
         t_out: the output tensor.
         weights: the weights tensor.
         bias: the bias tensor.
-        activator: the activator function which is ran after activation
+        activator: the activator function which is ran after activation.
     """
 
-    # Optional way for Python to optimize variable lookups.
+    # Optional way for Python to optimize variable lookups
     __slots__ = "t_in", "t_out", "weights", "bias", "activator"
 
     def __init__(self, in_size, out_size, activator=lambda x: x):
@@ -27,7 +27,7 @@ class Layer(object):
         Args:
             in_size: the size of the input tensor.
             out_size: the size of the output tensor.
-            activator: optional; the activator function. If not supplied, this will be a linear activator
+            activator: optional; the activator function. If not supplied, this will be a linear activator.
         """
 
         # Set output tensor (input will be supplied during inference)

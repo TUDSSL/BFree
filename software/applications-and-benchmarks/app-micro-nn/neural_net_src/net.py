@@ -8,7 +8,7 @@ class Net(object):
     This class represents a neural network, with functions for importing and running inference.
 
     Attributes:
-        layers: a list of the layers in this neural net
+        layers: a list of the layers in this neural net.
     """
 
     def __init__(self, file=None):
@@ -17,7 +17,7 @@ class Net(object):
         If no file is given, it is kept empty and layers can be added manually to the layers list.
 
         Args:
-            file: optional; an input file containing a neural network
+            file: optional; an input file containing a neural network.
         """
 
         self.layers = []
@@ -40,7 +40,7 @@ class Net(object):
         Args:
             input_data: the input tensor of the first layer.
         Returns:
-            the output tensor of the last layer
+            the output tensor of the last layer.
         """
 
         # Set the initial input tensor
