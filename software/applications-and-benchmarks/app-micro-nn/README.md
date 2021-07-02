@@ -37,6 +37,8 @@ The device used to develop and test the code in this repository on was a [Adafru
 When connected over USB and developing using [Mu](https://learn.adafruit.com/welcome-to-circuitpython/installing-mu-editor) one can connect to the serial console within the IDE.
 Furthermore, the [built-in plotter](https://codewith.mu/en/tutorials/1.1/plotter) in Mu will automatically plot the input and output values of the network (thus it shows a sine wave with the provided models in the plotter window).
 
+![Mu interface](mu.png "Mu interface")
+
 ## Known issues and limitations
 
 Due to the amount of memory on Adafruit Metro M0 and the size of variables in Python, only small models can be used.
