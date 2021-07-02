@@ -1,3 +1,5 @@
+# Copyright (c) 2021 TU Delft Sustainable Systems Laboratory (https://github.com/TUDSSL/BFree/blob/main/LICENSE)
+
 import board
 import neopixel
 
@@ -12,8 +14,9 @@ def set_brightness(brightness):
     Sets the brightness of the initialized NeoPixel.
 
     Args:
-        brightness: The brightness of the led.
+        brightness: the brightness of the LED
     """
+
     dot[0] = [(brightness * 0.95 + 1) * a for a in [63, 0, 0]]
 
 

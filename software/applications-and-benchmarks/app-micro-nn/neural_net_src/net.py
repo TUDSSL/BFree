@@ -3,20 +3,21 @@ from .layer import Layer
 
 class Net(object):
     """
-    Net class that represents a neural net, with functions for importing and running inference.
+    This class represents a neural network, with functions for importing and running inference.
 
     Attributes:
-        layers: A list of the layers in this neural net.
+        layers: a list of the layers in this neural net
     """
 
     def __init__(self, file=None):
         """
-        Initializes the neural net. Layers, weights and biases are read from the given file.
-        If no file is given, it is kept empty and layers can be added manually.
+        Method to initialize the neural network. Layers, weights and biases are read from the given file.
+        If no file is given, it is kept empty and layers can be added manually to the layers list.
 
         Args:
-            file: Optional; An input file containing a neural network.
+            file: optional; an input file containing a neural network
         """
+
         self.layers = []
         # If a file is specified import from it
         if file is not None:
@@ -32,14 +33,14 @@ class Net(object):
 
     def infer(self, input_data):
         """
-        Runs inference with the input data set as the input tensor of the first layer,
-        returns the output tensor of the last layer.
+        Method to run inference with the input data set as the input tensor of the first layer.
 
         Args:
-            input_data: The input tensor of the first layer.
+            input_data: the input tensor of the first layer.
         Returns:
-            The output tensor of the last layer.
+            the output tensor of the last layer
         """
+
         # Set the initial input tensor
         next_input = input_data
         # Activate each layer
