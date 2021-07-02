@@ -1,3 +1,5 @@
+# Copyright (c) 2021 TU Delft Sustainable Systems Laboratory (https://github.com/TUDSSL/BFree/blob/main/LICENSE)
+
 from .layer import Layer
 
 

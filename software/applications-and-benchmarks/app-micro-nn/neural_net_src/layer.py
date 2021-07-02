@@ -1,3 +1,5 @@
+# Copyright (c) 2021 TU Delft Sustainable Systems Laboratory (https://github.com/TUDSSL/BFree/blob/main/LICENSE)
+
 class Layer(object):
     """
     This class represents a dense layer in a neural network
