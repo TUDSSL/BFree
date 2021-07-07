@@ -2,13 +2,11 @@
 
 A simple pure-Python neural network library. Designed for usage on the [Adafruit Metro M0](https://www.adafruit.com/product/3505).
 
-This neural network library provides a simple and fast pure-Python way to run a simple [feedforward neural network](https://en.wikipedia.org/wiki/Feedforward_neural_network). It features the necessary code to import a neural network from a file which contains the weights and biases for each layer, and to run inference.
-[Activation functions](https://en.wikipedia.org/wiki/Activation_function) are present in the form of [lambda expressions](https://www.w3schools.com/python/python_lambda.asp), thus it supports any activation function.
+This neural network library provides a simple and fast pure-Python way to run a simple [feedforward neural network](https://en.wikipedia.org/wiki/Feedforward_neural_network). It features the necessary code to import a neural network from a file which contains the weights and biases for each layer, and to run inference. [Activation functions](https://en.wikipedia.org/wiki/Activation_function) are present in the form of [lambda expressions](https://www.w3schools.com/python/python_lambda.asp), thus it supports any activation function.
 
 ## How to run the demo
 
-To run the demo, place the [neural_net](neural_net) folder in the library folder of the Adafruit Metro M0, and run the `run_demo` function found in [demo.py](neural_net_src/demo.py). A function can be passed to the `run_demo` call. Every time a result is returned by the network, this function is called with this result as the argument.
-The default example [main.py](main.py) changes the brightness of the [NeoPixel](https://www.adafruit.com/category/168) on the [Adafruit Metro M0](https://www.adafruit.com/product/3505): the brightness will follow the curve of a sine. Four pre-trained models are present in the library which are imported and ran in the demo.
+To run the demo, place the [neural_net](neural_net) folder in the library folder of the Adafruit Metro M0, and run the `run_demo` function found in [demo.py](neural_net_src/demo.py). A function can be passed to the `run_demo` call. Every time a result is returned by the network, this function is called with this result as the argument. The default example [main.py](main.py) changes the brightness of the [NeoPixel](https://www.adafruit.com/category/168) on the [Adafruit Metro M0](https://www.adafruit.com/product/3505): the brightness will follow the curve of a sine. Four pre-trained models are present in the library which are imported and ran in the demo.
 
 ## Files in this demo
 
