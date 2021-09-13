@@ -46,15 +46,35 @@ $ cd build && make
 And an elf file named `NVM-Controller.elf` will be generated in `software/nvm-controller/build/` which you can upload to the BFree shield using an MSP430 programmer, or using a MSP430 LaunchPad.
 
 ### Building the BFree Core Software
+*Note: BFree Core has to be compiled using arm-gcc version 9! (not any higher version), this is due to a limitation in the original CircuitPython project*
+To build the BFree version of CircuitPython, navigate to BFree-core and execute the following.
+```
+$ git submodule update --init --recursive
+$ cd ports/atmel-samd
+$ make BOARD=metro_m0_express
+```
+A `firmware.uf2` file will be generated in `ports/atmel-samd/build-metro_m0_express/` which can be uploaded to the Metro M0 Express board by [flashing it using the UF2 Bootloader](https://learn.adafruit.com/installing-circuitpython-on-samd21-boards/installing-circuitpython).
+
+*Note that this is Beta software, so it's recommended to only flash BFree core if you also own a [J-Link](https://www.segger.com/products/debug-probes/j-link/models/j-link-edu/) programmer to recover the device if a bug occurs that prevents the system from entering the bootloader mode!*
 
 
 ## How to Operate BFree
+**Just like a regular Metro M0 Express with CircuitPython!**
+
+There is just one caveat when using peripheral devices (such as a sensor) that have a state that is reset when the system reboots. BFree can not know this, it will restore the peripheral interface (such as SPI), but it will not reinitialize the device.
+Therefore the only change you need to make to your Python code *if* you have such a peripheral is to add the reinitialization just before the usage of the device. An example of this can be seen in [the LoRa application](https://github.com/TUDSSL/BFree/blob/a541a0d664f71f19883a6698cdb7067a455fbf71/software/applications-and-benchmarks/imwut-app-lora/main.py#L36)
 
 ## List of Known Issues
-
-List of all known issues is listed in the [Issues](https://github.com/TUDSSL/BFree/issues) list of this project. If you found a bug or you would like to enhance ENGAGE: [please contribute](#How-to-Contribute-to-this-Project) - we look forward to your pull requests!
+List of all known issues is listed in the [Issues](https://github.com/TUDSSL/BFree/issues) list of this project. If you found a bug or you would like to enhance BFree: [please contribute](#How-to-Contribute-to-this-Project) - we look forward to your pull requests!
 
 ## How to Contribute to this Project
+We look forward to your contributions, improvements, additions and changes. Please follow the standard GitHub flow for code contributions. In macro terms this means the following.
+
+1. Fork the master branch of this repository; make sure that your fork will be up to date with the latest master branch.
+2. Create an issue here with a new feature or a bug report.
+3. Perform changes on your local branch and push them to your forked clone.
+4. Create a pull request referencing the issue it covers and wait for our response.
+
 
 ## Frequently Asked Questions
 
@@ -85,9 +105,9 @@ To cite this publication please use the following BiBTeX entry.
 
 ## Acknowledgments
 
-This research project was supported by [Netherlands Organisation for Scientific Research](https://www.nwo.nl/en), partly funded by the [Dutch Ministry of Economic Affairs and Climate Policy](https://www.government.nl/ministries/ministry-of-economic-affairs-and-climate-policy), through [TTW Perspective program ZERO (P15-06)](https://www.zero-program.nl/) within Project P4, and by the [National Science Foundation](https://www.nsf.org/) through grants [CNS-1850496](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1850496), [CNS-2032408](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2032408) and [CNS-2032408](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2038853). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+This research project was supported by [Netherlands Organisation for Scientific Research](https://www.nwo.nl/en), partly funded by the [Dutch Ministry of Economic Affairs and Climate Policy](https://www.government.nl/ministries/ministry-of-economic-affairs-and-climate-policy), through [TTW Perspective program ZERO (P15-06)](https://www.zero-program.nl/) within Project P4, and by the [National Science Foundation](https://www.nsf.org/) through grants [CNS-1850496](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1850496), [CNS-2032408](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2032408) and [CNS-2038853](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2038853). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
 
-ENGAGE was designed at [Northwestern University](https://www.northwestern.edu) in the US and [Delft University of Technology](https://www.tudelft.nl) in the Netherlands, whose both support is also greatly acknowledged. 
+BFree was designed at [Northwestern University](https://www.northwestern.edu) in the US and [Delft University of Technology](https://www.tudelft.nl) in the Netherlands, whose both support is also greatly acknowledged. 
 
 <a href="https://www.northwestern.edu"><img src="https://github.com/TUDSSL/BFree/blob/main/doc-images/northwestern_logo.jpg" width="300px"></a><a href="https://www.tudelft.nl"><img src="https://github.com/TUDSSL/BFree/blob/main/doc-images/tudelft_logo.png" width="300px"></a>
 
@@ -95,4 +115,4 @@ ENGAGE was designed at [Northwestern University](https://www.northwestern.edu) i
 
 Copyright (C) 2020 TU Delft Embedded and Networked Systems Group/Sustainable Systems Laboratory.
 
-MIT Licence. See [license](https://github.com/TUDSSL/ENGAGE/blob/master/LICENSE) file for details.
+MIT Licence. See [license](master/LICENSE) file for details.
