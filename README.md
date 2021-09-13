@@ -1,29 +1,52 @@
 # BFree
 
-This is the official public repository for a battery-free prototping platform with [CircuitPython](https://circuitpython.org/) for [Adafruit Metro M0 Express board](https://www.adafruit.com/product/3505).
-
-## Table of Contents
-
-- [Project Overview](#Project-Overview)
-    - ...
-- [List of Known Issues](#List-of-Known-Issues)
-- ...
-- [How to Cite This Work](#How-to-Cite-This-Work)
-- ...
-- [Acknowledgments](#Acknowledgments)
-- [Copyright](#Copyright)
+This is the official public repository for a **battery-free** prototping platform with [CircuitPython](https://circuitpython.org/) for the [Adafruit Metro M0 Express](https://www.adafruit.com/product/3505).
+This repository contains all the sources needed to get started using CircuitPython without any batteries!
 
 ## Project Overview
 
-<img src="https://github.com/TUDSSL/BFree/blob/main/doc-images/bfree-overview.jpg" width="800px">
+### Rationale
+Batteries are bad for the environment, and many embedded applications do not rely on a constant flow of energy. However, just connecting an energy-harvesting source to a microcontroller does not fully solve the problem. Energy from harvested sources is not constant and maybe not enough to continuously run the device, so we have to buffer some energy (typically in a capacitor). When a certain amount of energy is collected, the system activates for some seconds.
+
+It would be problematic if the program would start from the beginning every time the system restarts. Going into a sleep mode might also be problematic, as you never know when the energy returns.
+
+**This work focuses on continuing a Python application where it left off when the system restarts after a power failure, called intermittent-computing**
+We achieve this without any involvement from the user or any modifications to the Python code!
+
+All the magic happens internally in our modified version of the CircuitPython interpreter ([added as a submodule in software/BFree-core](https://github.com/TUDSSL/BFree-core)), which works together with our [BFree shield](hardware/BFree-shield). Everything is entirely open-source and accessible through this GitHub repository.
+
+<img src="https://github.com/TUDSSL/BFree/blob/main/doc-images/bfree-overview.jpg">
   
-The above figure presents: (A) BFree hardware shield; (B) example Python code executed on [Adafruit Metro M0 Express board](https://www.adafruit.com/product/3505) with BFree shield; (C) BFree shield with Adafruit Metro M0 Express board running a battery-free temperature measurement station; (D) BFree system in the wild.
+The above figure presents: (A) the BFree hardware shield; (B) example Python code executed on the [Adafruit Metro M0 Express board](https://www.adafruit.com/product/3505) with the BFree shield; (C) the BFree shield with Adafruit Metro M0 Express board running a battery-free temperature measurement station; (D) the BFree system in the wild.
+
+## How it works
+For the user (maybe you!), the intermittent-computing aspect is entirely invisible. Internally, the modified CircuitPython interpreter communicates with the BFree shield and decides when to make a so-called "checkpoint." A checkpoint is a snapshot of the program at that point. When the system runs out of power and eventually starts back up, this is the point where the program will resume. The system always continues from the last *successful* checkpoint.
+A checkpoint is created by sending the state of the interpreter (such as the current position in the program, the value of the variables, the state of the peripherals, etc.) to the BFree shield, which stores it in non-volatile memory (FRAM). For more details, please check out the complete paper at: https://dl.acm.org/doi/abs/10.1145/3432191 or https://research.tudelft.nl/en/publications/bfree-enabling-battery-free-sensor-prototyping-with-python
 
 ## Getting Started
+To ditch all the batteries for your next CircuitPython project using BFree you need five things:
+1. An [Adafruit Metro M0 Express board](https://www.adafruit.com/product/3505) 
+2. A working [BFree shield](hardware/BFree-shield) programmed with the software in [software/nvm-controller](software/nvm-controller).
+3. A build of the modified CircuitPyhton interpreter [BFree-core](https://github.com/TUDSSL/BFree-core))
+4. An energy harvesting source (such as a small solar panel)
+5. A buffer capacitor
+
+The BFree shield is a simple shield-like PCB that mainly holds an MSP430 microcontroller onboard FRAM for non-volatile storage and energy harvesting circuitry. The modified CircuitPython interpreter (BFree-core) can be built and uploaded the same way as the vanilla CircuitPython. For this, we would like to refer you to the [excellent CircuitPython build instructions](https://learn.adafruit.com/building-circuitpython/build-circuitpython). Don't forget to use https://github.com/TUDSSL/BFree-core instead of https://github.com/adafruit/circuitpython.git
 
 ### Building the Hardware
+All the EAGLE design files and a component list needed to build the BFree shield are availible in (hardware/BFree-shield)[hardware/BFree-shield].
 
-### Building the Software
+### Building the BFree Shield Software
+The [BFree shield sofware](https://github.com/TUDSSL/BFree/tree/main/software/nvm-controller) is build using [MSP430-gcc](https://www.ti.com/tool/MSP430-GCC-OPENSOURCE). To build it install the msp430-gcc toolchain in `/opt` or change the [msp430-toolchain.cmake](software/nvm-controller/msp430-toolchain.cmake) file to point to the toolchain.
+Navigate to `software/nvm-controller/`; then it's as simple as running:
+```
+$ ./configure
+$ cd build && make
+```
+And an elf file named `NVM-Controller.elf` will be generated in `software/nvm-controller/build/` which you can upload to the BFree shield using an MSP430 programmer, or using a MSP430 LaunchPad.
+
+### Building the BFree Core Software
+
 
 ## How to Operate BFree
 
