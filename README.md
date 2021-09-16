@@ -1,7 +1,6 @@
 # BFree
 
-This is the official public repository for a **battery-free** prototping platform with [CircuitPython](https://circuitpython.org/) for the [Adafruit Metro M0 Express](https://www.adafruit.com/product/3505).
-This repository contains all the sources needed to get started using CircuitPython without any batteries!
+This is the official public repository for a **battery-free** prototping platform with [CircuitPython](https://circuitpython.org/) for the [Adafruit Metro M0 Express](https://www.adafruit.com/product/3505). This repository contains all the sources needed to get started using CircuitPython without any batteries!
 
 ## Project Overview
 
@@ -21,7 +20,7 @@ The above figure presents: (A) the BFree hardware shield; (B) example Python cod
 
 ## How it works
 For the user (maybe you!), the intermittent-computing aspect is entirely invisible. Internally, the modified CircuitPython interpreter communicates with the BFree shield and decides when to make a so-called "checkpoint." A checkpoint is a snapshot of the program at that point. When the system runs out of power and eventually starts back up, this is the point where the program will resume. The system always continues from the last *successful* checkpoint.
-A checkpoint is created by sending the state of the interpreter (such as the current position in the program, the value of the variables, the state of the peripherals, etc.) to the BFree shield, which stores it in non-volatile memory (FRAM). For more details, please check out the complete paper at: https://dl.acm.org/doi/abs/10.1145/3432191 or https://research.tudelft.nl/en/publications/bfree-enabling-battery-free-sensor-prototyping-with-python
+A checkpoint is created by sending the state of the interpreter (such as the current position in the program, the value of the variables, the state of the peripherals, etc.) to the BFree shield, which stores it in non-volatile memory (FRAM). For more details, please check out the complete paper [here](https://dl.acm.org/doi/abs/10.1145/3432191).
 
 ## Getting Started
 To ditch all the batteries for your next CircuitPython project using BFree you need five things:
@@ -57,7 +56,6 @@ A `firmware.uf2` file will be generated in `ports/atmel-samd/build-metro_m0_expr
 
 *Note that this is Beta software, so it's recommended to only flash BFree core if you also own a [J-Link](https://www.segger.com/products/debug-probes/j-link/models/j-link-edu/) programmer to recover the device if a bug occurs that prevents the system from entering the bootloader mode!*
 
-
 ## How to Operate BFree
 **Just like a regular Metro M0 Express with CircuitPython!**
 
@@ -74,7 +72,6 @@ We look forward to your contributions, improvements, additions and changes. Plea
 2. Create an issue here with a new feature or a bug report.
 3. Perform changes on your local branch and push them to your forked clone.
 4. Create a pull request referencing the issue it covers and wait for our response.
-
 
 ## Frequently Asked Questions
 
@@ -118,6 +115,6 @@ BFree was designed at [Northwestern University](https://www.northwestern.edu) in
 
 ## Copyright
 
-Copyright (C) 2020 TU Delft Embedded and Networked Systems Group/Sustainable Systems Laboratory.
+Copyright (C) 2020-2021 TU Delft Embedded and Networked Systems Group/Sustainable Systems Laboratory.
 
 MIT Licence. See [license](master/LICENSE) file for details.
