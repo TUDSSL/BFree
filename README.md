@@ -95,18 +95,16 @@ To cite this publication please use the following BiBTeX entry.
 @article{kortbeek:imwut:2020:bfree,
 author = {Kortbeek, Vito and Bakar, Abu and Cruz, Stefany and Yildirim, Kasim Sinan and Pawe\l{}czak, Przemys\l{}aw and Hester, Josiah},
 title = {BFree: Enabling Battery-Free Sensor Prototyping with Python},
+journal = {Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.},
 year = {2020},
-issue_date = {December 2020},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
+month = dec,
 volume = {4},
 number = {4},
-url = {https://doi.org/10.1145/3432191},
-doi = {10.1145/3432191},
-journal = {Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.},
-month = dec,
 articleno = {135},
 numpages = {39},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3432191}
 }
 ```
 
