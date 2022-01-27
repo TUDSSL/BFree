@@ -29,14 +29,9 @@ rfm9x = adafruit_rfm9x.RFM9x(spi, cs, reset, 868.0, baudrate=1000000)
 print('Start receiving packets')
 while True:
     packet = rfm9x.receive()  # Wait for a packet to be received (up to 0.5 seconds)
-    if packet is not None:
-        message = str(packet, 'ascii')
-        prettyPrintMessage(message)
-   # try:
-   #     packet = rfm9#.receive()  # Wait for a packet to be received (up to 0.5 seconds)
-   #     if packet is #ot None:
-   #         message =#str(packet, 'ascii')
-   #         prettyPri#tMessage(message)
-   # except:
-   #     print('malformed packet received')
-   #     pass
+    try:
+        if packet is not None:
+            message = str(packet, 'ascii')
+            prettyPrintMessage(message)
+    except:
+        print('malformed packet received')
