@@ -14,6 +14,10 @@ Contains a small test program that can be used to verify that BFree is correctly
 
 ## Receiver
 Contains the Pyhthon code for the receiver that should be connected to the PC
+![Receiver](img/Receiver.png)
 
 ## Battery-Free Transmitter
 The BFree Python program that collects sensor data, computes the average of `N` samples, and broadcasts the result over LoRa.
+
+![Transmitter](img/Battery-Free-Transmitter-complete.png)
+
