@@ -42,7 +42,6 @@ class Sample:
         self.humid = temp_humid.relative_humidity
         
 # A class to track the accumulated samples and average them
-# when the 'process' method is called
 class SampleGroup:
     def __init__(self, sample_goal=10):
          # The number of samples needed in this group
