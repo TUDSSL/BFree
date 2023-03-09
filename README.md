@@ -1,6 +1,6 @@
 # BFree
 
-This is the official public repository for a **battery-free** prototping platform with [CircuitPython](https://circuitpython.org/) for the [Adafruit Metro M0 Express](https://www.adafruit.com/product/3505). This repository contains all the sources needed to get started using CircuitPython without any batteries!
+This is the official public repository for a **battery-free** prototyping platform with [CircuitPython](https://circuitpython.org/) for the [Adafruit Metro M0 Express](https://www.adafruit.com/product/3505). This repository contains all the sources needed to get started using CircuitPython without any batteries!
 
 ## Project Overview
 
